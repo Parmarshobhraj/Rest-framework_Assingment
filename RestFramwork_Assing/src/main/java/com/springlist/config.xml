@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.springlist.Student" id="s1">
+		<constructor-arg value="1"/>
+		<constructor-arg value="Raj"/>
+		<constructor-arg value="parmar"/>
+		<constructor-arg value="raj123@gmail.com"/>
+		<constructor-arg value="3241155"/>
+	</bean>
+	
+	<bean class="com.springlist.Student" id="s2">
+		<constructor-arg value="2"/>
+		<constructor-arg value="Sujal"/>
+		<constructor-arg value="prajapti"/>
+		<constructor-arg value="sujal@gmail.com"/>
+		<constructor-arg value="7554657"/>
+	</bean>
+	
+	<bean class="com.springlist.Student" id="s3">
+		<constructor-arg value="3"/>
+		<constructor-arg value="Kriss"/>
+		<constructor-arg value="patel"/>
+		<constructor-arg value="kriss@gmail.com"/>
+		<constructor-arg value="63514466"/>
+	</bean>
+	
+	<bean class="java.util.ArrayList" id="studentList">
+		<constructor-arg>
+			<list>
+				<ref bean="s1"/>
+				<ref bean="s2"/>
+				<ref bean="s3"/>
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>
